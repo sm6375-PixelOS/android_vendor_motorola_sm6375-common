@@ -395,8 +395,6 @@ PRODUCT_PACKAGES += \
     libscveObjectTracker \
     libscveObjectTracker_stub \
     libthermalclient \
-    libsns_device_mode_skel \
-    libsns_low_lat_stream_skel \
     libasphere \
     libqcbassboost \
     libqcreverb \
@@ -895,3 +893,7 @@ PRODUCT_PACKAGES += \
     dpmd \
     qccsyshal@1.2-service \
     wfdservice
+
+PRODUCT_PACKAGES += \
+    libsns_device_mode_skel_libsns_device_mode_skel_symlink64 \
+    libsns_low_lat_stream_skel_libsns_low_lat_stream_skel_symlink64
