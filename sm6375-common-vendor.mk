@@ -376,7 +376,7 @@ PRODUCT_PACKAGES += \
     libllvm-qcom \
     libmdmdetect \
     libmdsprpc \
-    libmmosal \
+    libmmosal_vendor \
     libmulawdec \
     libnetmgr \
     libqcci_legacy \
@@ -407,19 +407,19 @@ PRODUCT_PACKAGES += \
     libqcreverb \
     libqcvirt \
     libshoebox \
-    vendor.qti.diaghal@1.0 \
+    vendor.qti.diaghal@1.0_vendor \
     vendor.qti.hardware.bluetooth_sar@1.0 \
     vendor.qti.hardware.bluetooth_sar@1.1 \
     vendor.qti.hardware.cvp@1.0 \
     vendor.qti.hardware.dsp@1.0 \
-    vendor.qti.hardware.qccsyshal@1.0 \
+    vendor.qti.hardware.qccsyshal@1.0_vendor \
     vendor.qti.hardware.scve.objecttracker@1.0 \
     vendor.qti.hardware.scve.panorama@1.0 \
     vendor.qti.hardware.vpp@1.1 \
     vendor.qti.hardware.vpp@1.2 \
     vendor.qti.hardware.vpp@1.3 \
     vendor.qti.hardware.vpp@2.0 \
-    vendor.qti.hardware.wifidisplaysession@1.0 \
+    vendor.qti.hardware.wifidisplaysession@1.0_vendor \
     libDxHdcp \
     libFileMux_proprietary \
     libadm \

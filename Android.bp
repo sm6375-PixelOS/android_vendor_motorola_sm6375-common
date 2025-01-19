@@ -1128,7 +1128,6 @@ cc_prebuilt_library_shared {
                 "libhidlbase",
                 "libhidlmemory",
                 "android.hidl.memory@1.0",
-                "vendor.qti.qspmhal@1.0",
                 "libdl",
                 "libz",
                 "liblog",
@@ -1148,7 +1147,6 @@ cc_prebuilt_library_shared {
                 "libhidlbase",
                 "libhidlmemory",
                 "android.hidl.memory@1.0",
-                "vendor.qti.qspmhal@1.0",
                 "libdl",
                 "libz",
                 "liblog",
@@ -1159,6 +1157,7 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "both",
+    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -2578,7 +2577,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libmmosal",
+    name: "libmmosal_vendor",
+    stem: "libmmosal",
     owner: "motorola",
     strip: {
         none: true,
@@ -3888,7 +3888,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.diaghal@1.0",
+    name: "vendor.qti.diaghal@1.0_vendor",
+    stem: "vendor.qti.diaghal@1.0",
     owner: "motorola",
     strip: {
         none: true,
@@ -4105,7 +4106,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.qccsyshal@1.0",
+    name: "vendor.qti.hardware.qccsyshal@1.0_vendor",
+    stem: "vendor.qti.hardware.qccsyshal@1.0",
     owner: "motorola",
     strip: {
         none: true,
@@ -4412,7 +4414,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.wifidisplaysession@1.0",
+    name: "vendor.qti.hardware.wifidisplaysession@1.0_vendor",
+    stem: "vendor.qti.hardware.wifidisplaysession@1.0",
     owner: "motorola",
     strip: {
         none: true,
@@ -4490,7 +4493,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib/libFileMux_proprietary.so",
             ],
             shared_libs: [
-                "libmmosal",
+                "libmmosal_vendor",
                 "liblog",
                 "libutils",
                 "libcutils",
@@ -4575,7 +4578,7 @@ cc_prebuilt_library_shared {
                 "libutils",
                 "liblog",
                 "libcutils",
-                "libmmosal",
+                "libmmosal_vendor",
                 "libc++",
                 "libc",
                 "libm",
@@ -4600,7 +4603,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib/libmmrtpencoder_proprietary.so",
             ],
             shared_libs: [
-                "libmmosal",
+                "libmmosal_vendor",
                 "liblog",
                 "libutils",
                 "libcutils",
@@ -4875,7 +4878,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib/libwfdcodecv4l2_proprietary.so",
             ],
             shared_libs: [
-                "libmmosal",
+                "libmmosal_vendor",
                 "liblog",
                 "libutils",
                 "libcutils",
@@ -4906,7 +4909,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib/libwfdcommonutils_proprietary.so",
             ],
             shared_libs: [
-                "libmmosal",
+                "libmmosal_vendor",
                 "liblog",
                 "libutils",
                 "libcutils",
@@ -4937,7 +4940,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib/libwfdconfigutils_proprietary.so",
             ],
             shared_libs: [
-                "libmmosal",
+                "libmmosal_vendor",
                 "liblog",
                 "libutils",
                 "libcutils",
@@ -4998,7 +5001,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib/libwfdhdcpcp.so",
             ],
             shared_libs: [
-                "libmmosal",
+                "libmmosal_vendor",
                 "libDxHdcp",
                 "libmm-hdcpmgr",
                 "liblog",
@@ -5028,7 +5031,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib/libwfdhdcpservice_proprietary.so",
             ],
             shared_libs: [
-                "libmmosal",
+                "libmmosal_vendor",
                 "liblog",
                 "libutils",
                 "libcutils",
@@ -5059,7 +5062,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib/libwfdmminterface_proprietary.so",
             ],
             shared_libs: [
-                "libmmosal",
+                "libmmosal_vendor",
                 "liblog",
                 "libutils",
                 "libc++",
@@ -5086,7 +5089,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib/libwfdmmservice_proprietary.so",
             ],
             shared_libs: [
-                "libmmosal",
+                "libmmosal_vendor",
                 "liblog",
                 "libutils",
                 "libcutils",
@@ -5116,7 +5119,7 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "libbinder",
-                "libmmosal",
+                "libmmosal_vendor",
                 "liblog",
                 "libutils",
                 "libmmrtpencoder_proprietary",
@@ -5157,7 +5160,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib/libwfdmodulehdcpsession.so",
             ],
             shared_libs: [
-                "libmmosal",
+                "libmmosal_vendor",
                 "liblog",
                 "libutils",
                 "libwfdhdcpcp",
@@ -5191,7 +5194,7 @@ cc_prebuilt_library_shared {
                 "libc++",
                 "libcutils",
                 "libutils",
-                "libmmosal",
+                "libmmosal_vendor",
                 "libwfdcommonutils_proprietary",
                 "libwfdconfigutils_proprietary",
                 "liblog",
@@ -5218,11 +5221,11 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib/libwfdsessionmodule.so",
             ],
             shared_libs: [
-                "libmmosal",
+                "libmmosal_vendor",
                 "liblog",
                 "libutils",
                 "libwfdsourcesession_proprietary",
-                "vendor.qti.hardware.wifidisplaysession@1.0",
+                "vendor.qti.hardware.wifidisplaysession@1.0_vendor",
                 "libwfdcommonutils_proprietary",
                 "libhidlbase",
                 "libc++",
@@ -5253,7 +5256,7 @@ cc_prebuilt_library_shared {
                 "libutils",
                 "libcutils",
                 "libbinder",
-                "libmmosal",
+                "libmmosal_vendor",
                 "libwfdcommonutils_proprietary",
                 "libwfdconfigutils_proprietary",
                 "libwfdmminterface_proprietary",
@@ -5294,7 +5297,7 @@ cc_prebuilt_library_shared {
                 "libmmrtpdecoder_proprietary",
                 "libwfduibcinterface_proprietary",
                 "libwfdmmsrc_proprietary",
-                "libmmosal",
+                "libmmosal_vendor",
                 "libwfdcommonutils_proprietary",
                 "libwfdconfigutils_proprietary",
                 "libqdMetaData",
@@ -5326,7 +5329,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib/libwfduibcinterface_proprietary.so",
             ],
             shared_libs: [
-                "libmmosal",
+                "libmmosal_vendor",
                 "liblog",
                 "libutils",
                 "libcutils",
@@ -5356,7 +5359,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib/libwfduibcsink_proprietary.so",
             ],
             shared_libs: [
-                "libmmosal",
+                "libmmosal_vendor",
                 "libutils",
                 "liblog",
                 "libc++",
@@ -5383,7 +5386,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib/libwfduibcsinkinterface_proprietary.so",
             ],
             shared_libs: [
-                "libmmosal",
+                "libmmosal_vendor",
                 "liblog",
                 "libutils",
                 "libcutils",
@@ -5414,7 +5417,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib/libwfduibcsrc_proprietary.so",
             ],
             shared_libs: [
-                "libmmosal",
+                "libmmosal_vendor",
                 "libwfdcommonutils_proprietary",
                 "liblog",
                 "libutils",
@@ -5445,7 +5448,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib/libwfduibcsrcinterface_proprietary.so",
             ],
             shared_libs: [
-                "libmmosal",
+                "libmmosal_vendor",
                 "liblog",
                 "libutils",
                 "libcutils",
@@ -5476,7 +5479,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib/libwfdutils_proprietary.so",
             ],
             shared_libs: [
-                "libmmosal",
+                "libmmosal_vendor",
                 "liblog",
                 "libion",
                 "libc++",
@@ -5567,7 +5570,7 @@ cc_prebuilt_library_shared {
                 "libhidlbase",
                 "libutils",
                 "libcutils",
-                "vendor.qti.hardware.wifidisplaysession@1.0",
+                "vendor.qti.hardware.wifidisplaysession@1.0_vendor",
                 "libwfdsessionmodule",
                 "liblog",
                 "libwfdcommonutils_proprietary",
@@ -8591,7 +8594,7 @@ cc_prebuilt_library_shared {
                 "libbase",
                 "libfmq",
                 "libhidlbase",
-                "vendor.qti.hardware.qccsyshal@1.0",
+                "vendor.qti.hardware.qccsyshal@1.0_vendor",
                 "libc++",
                 "libc",
                 "libm",
@@ -8903,7 +8906,7 @@ cc_prebuilt_library_shared {
                 "libbase",
                 "libfmq",
                 "libhidlbase",
-                "vendor.qti.hardware.qccsyshal@1.0",
+                "vendor.qti.hardware.qccsyshal@1.0_vendor",
                 "libc++",
                 "libc",
                 "libm",
@@ -13767,11 +13770,9 @@ cc_prebuilt_library_shared {
                 "proprietary/system_ext/lib/libdpmctmgr.so",
             ],
             shared_libs: [
-                "libdiag_system",
                 "libbinder",
                 "libcutils",
                 "libutils",
-                "libdpmframework",
                 "com.qualcomm.qti.dpm.api@1.0",
                 "libc++",
                 "libc",
@@ -13784,11 +13785,9 @@ cc_prebuilt_library_shared {
                 "proprietary/system_ext/lib64/libdpmctmgr.so",
             ],
             shared_libs: [
-                "libdiag_system",
                 "libbinder",
                 "libcutils",
                 "libutils",
-                "libdpmframework",
                 "com.qualcomm.qti.dpm.api@1.0",
                 "libc++",
                 "libc",
@@ -13814,11 +13813,9 @@ cc_prebuilt_library_shared {
                 "proprietary/system_ext/lib/libdpmfdmgr.so",
             ],
             shared_libs: [
-                "libdiag_system",
                 "libbinder",
                 "libcutils",
                 "libutils",
-                "libdpmframework",
                 "com.qualcomm.qti.dpm.api@1.0",
                 "libc++",
                 "libc",
@@ -13831,11 +13828,9 @@ cc_prebuilt_library_shared {
                 "proprietary/system_ext/lib64/libdpmfdmgr.so",
             ],
             shared_libs: [
-                "libdiag_system",
                 "libbinder",
                 "libcutils",
                 "libutils",
-                "libdpmframework",
                 "com.qualcomm.qti.dpm.api@1.0",
                 "libc++",
                 "libc",
@@ -13861,7 +13856,6 @@ cc_prebuilt_library_shared {
                 "proprietary/system_ext/lib/libdpmframework.so",
             ],
             shared_libs: [
-                "libdiag_system",
                 "libbinder",
                 "libcutils",
                 "libutils",
@@ -13881,7 +13875,6 @@ cc_prebuilt_library_shared {
                 "proprietary/system_ext/lib64/libdpmframework.so",
             ],
             shared_libs: [
-                "libdiag_system",
                 "libbinder",
                 "libcutils",
                 "libutils",
@@ -13898,6 +13891,7 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "both",
+    check_elf_files: false,
     prefer: true,
     system_ext_specific: true,
 }
@@ -13914,11 +13908,9 @@ cc_prebuilt_library_shared {
                 "proprietary/system_ext/lib/libdpmtcm.so",
             ],
             shared_libs: [
-                "libdiag_system",
                 "libbinder",
                 "libcutils",
                 "libutils",
-                "libdpmframework",
                 "com.qualcomm.qti.dpm.api@1.0",
                 "libc++",
                 "libc",
@@ -13931,11 +13923,9 @@ cc_prebuilt_library_shared {
                 "proprietary/system_ext/lib64/libdpmtcm.so",
             ],
             shared_libs: [
-                "libdiag_system",
                 "libbinder",
                 "libcutils",
                 "libutils",
-                "libdpmframework",
                 "com.qualcomm.qti.dpm.api@1.0",
                 "libc++",
                 "libc",
@@ -15383,7 +15373,6 @@ cc_prebuilt_library_shared {
                 "libcutils",
                 "libutils",
                 "liblog",
-                "libdiag_system",
                 "libgui",
                 "libandroid",
                 "libnativewindow",
@@ -15425,7 +15414,6 @@ cc_prebuilt_library_shared {
                 "libbinder",
                 "libbinder_ndk",
                 "vendor.qti.ImsRtpService-V1-ndk",
-                "libdiag_system",
                 "libcutils",
                 "libutils",
                 "liblog",
@@ -15456,7 +15444,6 @@ cc_prebuilt_library_shared {
                 "libutils",
                 "libcutils",
                 "liblog",
-                "libdiag_system",
                 "lib-imsvtutils",
                 "libGLESv2",
                 "libEGL",
@@ -15487,7 +15474,6 @@ cc_prebuilt_library_shared {
                 "libutils",
                 "libcutils",
                 "liblog",
-                "libdiag_system",
                 "libc++",
                 "libc",
                 "libm",
@@ -15496,6 +15482,7 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "64",
+    check_elf_files: false,
     prefer: true,
     system_ext_specific: true,
 }
@@ -15528,6 +15515,7 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "64",
+    check_elf_files: false,
     prefer: true,
     system_ext_specific: true,
 }
@@ -16336,7 +16324,7 @@ cc_prebuilt_binary {
                 "libqsocket",
                 "libqrtr",
                 "liblog",
-                "vendor.qti.diaghal@1.0",
+                "vendor.qti.diaghal@1.0_vendor",
                 "libhidlmemory",
                 "android.hidl.allocator@1.0",
                 "android.hidl.memory@1.0",
@@ -17999,7 +17987,7 @@ cc_prebuilt_binary {
                 "proprietary/vendor/bin/wifidisplayhalservice",
             ],
             shared_libs: [
-                "vendor.qti.hardware.wifidisplaysession@1.0",
+                "vendor.qti.hardware.wifidisplaysession@1.0_vendor",
                 "vendor.qti.hardware.wifidisplaysessionl@1.0-halimpl",
                 "libhidlbase",
                 "libutils",
@@ -18141,8 +18129,6 @@ cc_prebuilt_binary {
                 "proprietary/system_ext/bin/dpmd",
             ],
             shared_libs: [
-                "libdpmframework",
-                "libdiag_system",
                 "libhardware_legacy",
                 "libhidlbase",
                 "libcutils",
