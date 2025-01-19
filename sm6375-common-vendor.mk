@@ -356,7 +356,6 @@ PRODUCT_PACKAGES += \
     libcdsprpc \
     libconfigdb \
     libcvp_common \
-    libcvpcpuRev_skel \
     libdiag \
     libdsi_netctrl \
     libdsutils \
@@ -410,7 +409,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.diaghal@1.0_vendor \
     vendor.qti.hardware.bluetooth_sar@1.0 \
     vendor.qti.hardware.bluetooth_sar@1.1 \
-    vendor.qti.hardware.cvp@1.0 \
     vendor.qti.hardware.dsp@1.0 \
     vendor.qti.hardware.qccsyshal@1.0_vendor \
     vendor.qti.hardware.scve.objecttracker@1.0 \
@@ -508,6 +506,7 @@ PRODUCT_PACKAGES += \
     libcneoplookup \
     libcneqmiutils \
     libcpion \
+    libcvpcpuRev_skel \
     libdataitems \
     libdisp-aba \
     libdisplayqos \
@@ -639,6 +638,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.gnss@4.0 \
     vendor.qti.hardware.alarm@1.0 \
     vendor.qti.hardware.cacert@1.0 \
+    vendor.qti.hardware.cvp@1.0 \
     vendor.qti.hardware.data.cne.internal.api@1.0 \
     vendor.qti.hardware.data.cne.internal.constants@1.0 \
     vendor.qti.hardware.data.cne.internal.server@1.0 \
