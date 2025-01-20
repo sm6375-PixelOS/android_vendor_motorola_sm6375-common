@@ -13743,6 +13743,7 @@ cc_prebuilt_library_shared {
                 "libbinder",
                 "libcutils",
                 "libutils",
+                "libdpmframework",
                 "com.qualcomm.qti.dpm.api@1.0",
                 "libc++",
                 "libc",
@@ -13758,6 +13759,7 @@ cc_prebuilt_library_shared {
                 "libbinder",
                 "libcutils",
                 "libutils",
+                "libdpmframework",
                 "com.qualcomm.qti.dpm.api@1.0",
                 "libc++",
                 "libc",
@@ -13767,6 +13769,7 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "both",
+    check_elf_files: false,
     prefer: true,
     system_ext_specific: true,
 }
@@ -13786,6 +13789,7 @@ cc_prebuilt_library_shared {
                 "libbinder",
                 "libcutils",
                 "libutils",
+                "libdpmframework",
                 "com.qualcomm.qti.dpm.api@1.0",
                 "libc++",
                 "libc",
@@ -13801,6 +13805,7 @@ cc_prebuilt_library_shared {
                 "libbinder",
                 "libcutils",
                 "libutils",
+                "libdpmframework",
                 "com.qualcomm.qti.dpm.api@1.0",
                 "libc++",
                 "libc",
@@ -13810,6 +13815,7 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "both",
+    check_elf_files: false,
     prefer: true,
     system_ext_specific: true,
 }
@@ -13881,6 +13887,7 @@ cc_prebuilt_library_shared {
                 "libbinder",
                 "libcutils",
                 "libutils",
+                "libdpmframework",
                 "com.qualcomm.qti.dpm.api@1.0",
                 "libc++",
                 "libc",
@@ -13896,6 +13903,7 @@ cc_prebuilt_library_shared {
                 "libbinder",
                 "libcutils",
                 "libutils",
+                "libdpmframework",
                 "com.qualcomm.qti.dpm.api@1.0",
                 "libc++",
                 "libc",
@@ -13905,6 +13913,7 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "both",
+    check_elf_files: false,
     prefer: true,
     system_ext_specific: true,
 }
@@ -15355,6 +15364,7 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "64",
+    check_elf_files: false,
     prefer: true,
     system_ext_specific: true,
 }
@@ -15395,6 +15405,7 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "64",
+    check_elf_files: false,
     prefer: true,
     system_ext_specific: true,
 }
@@ -15425,6 +15436,7 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "64",
+    check_elf_files: false,
     prefer: true,
     system_ext_specific: true,
 }
@@ -15446,39 +15458,6 @@ cc_prebuilt_library_shared {
                 "liblog",
                 "libc++",
                 "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    check_elf_files: false,
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libdiag_system",
-    owner: "motorola",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/libdiag_system.so",
-            ],
-            shared_libs: [
-                "vendor.qti.diaghal@1.0",
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "android.hidl.allocator@1.0",
-                "android.hidl.memory@1.0",
-                "libhidlmemory",
-                "libc",
-                "libcutils",
-                "libc++",
                 "libm",
                 "libdl",
             ],
@@ -18100,6 +18079,7 @@ cc_prebuilt_binary {
                 "proprietary/system_ext/bin/dpmd",
             ],
             shared_libs: [
+                "libdpmframework",
                 "libhardware_legacy",
                 "libhidlbase",
                 "libcutils",
@@ -18113,6 +18093,7 @@ cc_prebuilt_binary {
         },
     },
     compile_multilib: "64",
+    check_elf_files: false,
     strip: {
         none: true,
     },
