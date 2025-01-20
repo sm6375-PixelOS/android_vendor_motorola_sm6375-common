@@ -18187,6 +18187,13 @@ install_symlink {
 }
 
 install_symlink {
+    name: "vendor_bin_expat",
+    soc_specific: true,
+    installed_location: "bin/expat",
+    symlink_target: "/vendor/bin/motobox",
+}
+
+install_symlink {
     name: "vendor_lib_libEGL_adreno_so",
     soc_specific: true,
     installed_location: "lib/libEGL_adreno.so",
