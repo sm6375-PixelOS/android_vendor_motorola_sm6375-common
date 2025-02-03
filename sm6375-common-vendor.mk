@@ -776,6 +776,7 @@ PRODUCT_PACKAGES += \
     lib-imsvt \
     lib-imsvtextutils \
     lib-imsvtutils \
+    libdiag_system \
     libimscamera_jni \
     libimsmedia_jni \
     libwfdnative \
