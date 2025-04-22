@@ -6,6 +6,10 @@ PRODUCT_SOONG_NAMESPACES += \
     vendor/motorola/sm6375-common
 
 PRODUCT_COPY_FILES += \
+    vendor/motorola/sm6375-common/proprietary/odm/etc/dolby/multimedia_dolby_dax_default.xml:$(TARGET_COPY_OUT_ODM)/etc/dolby/multimedia_dolby_dax_default.xml \
+     vendor/motorola/sm6375-common/proprietary/odm/etc/init/vendor.dolby.media.c2@1.0-service.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.dolby.media.c2@1.0-service.rc \
+     vendor/motorola/sm6375-common/proprietary/odm/etc/init/vendor.dolby_sp.hardware.dmssp@2.0-service.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.dolby_sp.hardware.dmssp@2.0-service.rc \
+     vendor/motorola/sm6375-common/proprietary/odm/etc/init/vendor.dolby_v3_6.hardware.dms360@2.0-service.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.dolby_v3_6.hardware.dms360@2.0-service.rc \
     vendor/motorola/sm6375-common/proprietary/product/etc/permissions/UimGba.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/UimGba.xml \
     vendor/motorola/sm6375-common/proprietary/product/etc/permissions/UimGbaManager.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/UimGbaManager.xml \
     vendor/motorola/sm6375-common/proprietary/product/etc/permissions/UimService.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/UimService.xml \
@@ -319,6 +323,27 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/sm6375-common/proprietary/vendor/gpu/kbc/unified_ksqs.bin:$(TARGET_COPY_OUT_VENDOR)/gpu/kbc/unified_ksqs.bin
 
 PRODUCT_PACKAGES += \
+    libdapparamstorage_v3_6 \
+     libdeccfg_v3_6 \
+     libdlbdsservice_v3_6 \
+     vendor.dolby_v3_6.hardware.dms360@2.0 \
+     libstagefright_soft_ddpdec \
+     libhwdap_v3_6 \
+     libswdap_v3_6 \
+     libcodec2_hidl@1.0_sp \
+     libcodec2_hidl_plugin_sp \
+     libcodec2_soft_ac4dec_sp \
+     libcodec2_soft_common_sp \
+     libcodec2_soft_ddpdec_sp \
+     libcodec2_store_dolby_sp \
+     libcodec2_vndk_sp \
+     libdapparamstorage_sp \
+     libdeccfg_sp \
+     libdlbdsservice_sp \
+     libui_sp \
+     vendor.dolby_sp.hardware.dmssp@2.0-impl \
+     vendor.dolby_sp.hardware.dmssp@2.0 \
+     vendor.dolby_v3_6.hardware.dms360@2.0-impl \
     btaudio_offload_if \
     eglSubDriverAndroid \
     libEGL_adreno \
@@ -418,6 +443,8 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.vpp@1.3 \
     vendor.qti.hardware.vpp@2.0 \
     vendor.qti.hardware.wifidisplaysession@1.0_vendor \
+    manifest_dax_dolby_v3_6.xml \
+     vendor.dolby.hardware.dms.xml \
     libDxHdcp \
     libFileMux_proprietary \
     libadm \
@@ -891,6 +918,9 @@ PRODUCT_PACKAGES += \
     xtwifi-client \
     xtwifi-inet-agent \
     dpmd \
+    vendor.dolby_sp.hardware.dmssp@2.0-service \
+     vendor.dolby_sp.media.c2@1.0-service \
+     vendor.dolby_v3_6.hardware.dms360@2.0-service \
     qccsyshal@1.2-service \
     wfdservice
 
